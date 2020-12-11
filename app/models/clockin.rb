@@ -1,0 +1,2 @@
+class Clockin < ApplicationRecord
+end
