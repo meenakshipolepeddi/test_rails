@@ -1,9 +1,6 @@
 <div class="event">
   <div class="event__content">
     <div class="event__content__header">
-      <p class="event__content__time-logged">
-        <%= @clockin.time_logged.strftime('%B %e, %Y - %l:%M %p') %>
-      </p>
       <span class="event__content__actions">
         <%= link_to 'Edit', edit_clockin_path(@clockin), class: 'event__content__actions__action' %>
         <%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'event__content__actions__action' %>
@@ -17,3 +14,9 @@
     </div>
   </div>
 </div>
+
+
+
+  <!-- <p class="event__content__time-logged">
+  <% "DateTime.strptime(@clockin.time_logged,'%B %e, %Y - %l:%M %p')" %>
+      </p> -->

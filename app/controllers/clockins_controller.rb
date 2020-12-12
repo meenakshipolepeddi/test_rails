@@ -34,7 +34,7 @@ class ClockinsController < ApplicationController
 
   def destroy
      @clockin = Clockin.find(params[:id])
-     @clock_event.destroy
+     @clockin.destroy
     redirect_to clockins_path
   end
   private
