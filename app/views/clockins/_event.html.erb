@@ -1,16 +1,36 @@
-<div class="event">
-  <div class="event__content">
-    <div class="event__content__header">
-      <span class="event__content__actions">
-        <%= link_to 'Edit', edit_clockin_path(@clockin), class: 'event__content__actions__action' %>
-        <%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'event__content__actions__action' %>
-      <span>
+<div class="section">
+  <div class="container">
+      <div class="columns">
+    <div class="column">
+      <p>Full Name</p>
     </div>
-    <div class="event__content__data">
-      <p class="event__content__data__name"><%= @clockin.name %></p>
-      <span class="event__content__data__type <%= @clockin.clocking_in ? 'event__content__data__type--in' : 'event__content__data__type--out' %>">
-        <%= @clockin.clocking_in ? 'You are currently clocked in.' : 'Are you sure you want to clock out?' %>
-      </span>
+    <div class="column">
+      <p>Status</p>
+    </div>
+    <div class="column">
+      <p>Edit Entry</p>
+    </div>
+    <div class="column">
+      <p>Delete Entry</p>
+    </div>
+  </div>
+      <div class="columns">
+        <div class="column">
+          <p class="event__content__data__name"><%= @clockin.name %></p>
+        </div>
+        <div class="column">
+          <%= @clockin.clocking_in ? 'You are currently clocked in.' : 'You have successfully clocked out.' %>
+        </div>
+        <div class="column">
+          <span class="event__content__actions">
+              <%= link_to 'Edit', edit_clockin_path(@clockin), class: 'event__content__actions__action' %>
+          <span>
+        </div>
+        <div class="column">
+          <span class="event__content__actions">
+              <%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'event__content__actions__action' %>
+          <span>
+        </div>
     </div>
   </div>
 </div>

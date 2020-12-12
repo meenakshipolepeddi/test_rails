@@ -7,8 +7,10 @@
     }
   %>
   <%= render 'hero' %>
-
-  <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
+<div class="box has-text-centered">
+ <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
+</div>
+  
 
   <% @clockins.each do |clockin| %>
     <% @clockin = clockin %>
