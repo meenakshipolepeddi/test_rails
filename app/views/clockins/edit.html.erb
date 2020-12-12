@@ -1,15 +1,13 @@
-<div class="outer-flex-container">
   <div class="container">
 
     <%
-      @hero = {
+      @main = {
         title: 'Edit Clock In',
-        description: sanitize('Use the form below to edit clock event #' + @clockin.id.to_s + '. <a href="/" class="hero__link">Click here</a> to go home.'),
+        description: 'You can clock out from here',
       }
     %>
-    <%= render 'hero' %>
+    <%= render 'main' %>
 
     <%= render 'edit_form' %>
   
   </div>
-</div>

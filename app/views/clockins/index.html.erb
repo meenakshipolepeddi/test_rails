@@ -1,20 +1,35 @@
-<div class="container">
+<div class="container has-text-centered">
 
   <%
-    @hero = {
+    @main = {
       title: 'Employee Clock In',
       description: 'Clock in here',
     }
   %>
-  <%= render 'hero' %>
-<div class="box has-text-centered">
- <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
+  <%= render 'main' %>
+  <div class="box has-text-centered">
+   <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
+  </div>
+  <h1 class='section'>
+    <strong class='has-text-primary'><u>Clock-in Information</u></strong>
+  </h1> 
+  <div class="container has-text-left">
+    <div class='columns is-mobile is-left'> 
+      <table class="table is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Edit Entry</th>
+          <th>Delete Entry</th>
+        </tr>
+      </thead>
+      <% @clockins.each do |clockin| %>
+        <% @clockin = clockin %>
+        <%= render 'event' %>
+      <% end %>
+    </table>
+  </div>
 </div>
-  
-
-  <% @clockins.each do |clockin| %>
-    <% @clockin = clockin %>
-    <%= render 'event' %>
-  <% end %>
-
 </div>

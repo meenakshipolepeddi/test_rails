@@ -1,42 +1,14 @@
-<div class="section">
-  <div class="container">
-      <div class="columns">
-    <div class="column">
-      <p>Full Name</p>
-    </div>
-    <div class="column">
-      <p>Status</p>
-    </div>
-    <div class="column">
-      <p>Edit Entry</p>
-    </div>
-    <div class="column">
-      <p>Delete Entry</p>
-    </div>
-  </div>
-      <div class="columns">
-        <div class="column">
-          <p class="event__content__data__name"><%= @clockin.name %></p>
-        </div>
-        <div class="column">
-          <%= @clockin.clocking_in ? 'You are currently clocked in.' : 'You have successfully clocked out.' %>
-        </div>
-        <div class="column">
-          <span class="event__content__actions">
-              <%= link_to 'Edit', edit_clockin_path(@clockin), class: 'event__content__actions__action' %>
-          <span>
-        </div>
-        <div class="column">
-          <span class="event__content__actions">
-              <%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'event__content__actions__action' %>
-          <span>
-        </div>
-    </div>
-  </div>
-</div>
+ <tbody>
+      <tr>
+        <td><strong class="has-text-primary"><%= @clockin.name %></strong></td>
+        <td><%= @clockin.time_logged.to_time.strftime('%B %e at %l:%M %p') %></td>
+        <td><%= @clockin.clocking_in ? 'You are currently clocked in.' : 'You have successfully clocked out.' %></td>
+        <td><%= link_to 'Edit', edit_clockin_path(@clockin), class: 'has-text-link' %></td>
+        <td><%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'has-text-link' %></td>
+        
+      </tr>
+    </tbody>
 
 
 
-  <!-- <p class="event__content__time-logged">
-  <% "DateTime.strptime(@clockin.time_logged,'%B %e, %Y - %l:%M %p')" %>
-      </p> -->
+

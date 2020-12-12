@@ -1,13 +1,11 @@
-<div class="level">
-  <div class="container">
-
+<div class="container">
     <%
-      @hero = {
+      @main = {
         title: 'Clock In',
-        description: sanitize('Use the form below to create a new clock in/out event. <a href="/" class="hero__link">Click here</a> to go home.'),
+        description: 'Please clock your time'
       }
     %>
-    <%= render 'hero' %>
+    <%= render 'main' %>
 
     <%= render 'new_form' %>
 
