@@ -1,4 +1,4 @@
-<%= form_with model: @clock_event, local: true, class: 'form' do |form| %>
+<%= form_with model: @clockin, local: true, class: 'form' do |form| %>
   <div class="form__field">
     <div class="form__field__header">
       <%= form.label :name, 'Your Name', class: 'form__field__header__label' %>
@@ -17,5 +17,5 @@
       <%= form.label :clocking_in, 'Check Box to Clock In', class: 'form__field__checkbox__label' %>
     </div>
   </div>
-  <%= form.submit 'Edit Clock Event #' + @clock_event.id.to_s, class: 'button' %>
+  <%= form.submit 'Edit Clock Event #' + @clockin.id.to_s, class: 'button' %>
 <% end %>

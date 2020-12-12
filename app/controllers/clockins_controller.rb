@@ -25,7 +25,7 @@ class ClockinsController < ApplicationController
 
   def update
      @clockin = Clockin.find(params[:id])
-    if @clock_event.update(clock_event_params)
+    if @clockin.update(clockin_params)
       redirect_to clockins_path
     else
       redirect_to edit_clockin_path
