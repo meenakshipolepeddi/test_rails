@@ -1,15 +1,27 @@
 <div class="container">
-    <%
+   <%
       @main = {
         title: 'Clock In',
         description: 'Please clock your time'
       }
-    %>
-    <%= render 'main' %>
-
-    <%= render 'new_form' %>
-
-  </div>
+      %>
+   <%= render 'main' %>
+   <%= simple_form_for :clockin, url: clockins_path, local: true, class: 'form' do |f| %>
+   <div class="field">
+      <div class="control">
+         <%= f.label :name, 'Full Name', class: 'label' %>
+      </div>
+      <%= f.input_field :name, placeholder:'Please Enter Full Name', class: 'input is-rounded' %>
+   </div>
+   <div class="field">
+      <div class="control">
+         <%= f.check_box :clocking_in, class: 'checkbox' %>
+         <%= f.label :clocking_in, 'Clock In/ Out', class: 'checkbox'%>
+      </div>
+   </div>
+   <%= f.submit 'Clock In/Out ', class: 'button is-primary' %>
+   <% end %>
+</div>
 </div>
 
 

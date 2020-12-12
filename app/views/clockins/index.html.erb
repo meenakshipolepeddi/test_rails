@@ -1,35 +1,43 @@
 <div class="container has-text-centered">
+   <%
+      @main = {
+        title: 'Employee Clock In',
+        description: 'Clock in here',
+      }
+      %>
+   <%= render 'main' %>
+   <div class="box has-text-centered">
+      <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
+   </div>
+   <h1 class='section'>
+      <strong class='has-text-primary'><u>Clock-in Information</u></strong>
+   </h1>
+   <div class="container has-text-left">
+      <div class='columns is-mobile is-left'>
+         <table class="table is-hoverable is-fullwidth">
+            <thead>
+               <tr>
+                  <th>Full Name</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Edit Entry</th>
+                  <th>Delete Entry</th>
+               </tr>
+            </thead>
+            <% @clockins.each do |clockin| %>
+            <% @clockin = clockin %>
+            <tbody>
+               <tr>
+                  <td><strong class="has-text-primary"><%= @clockin.name %></strong></td>
+                  <td><%= @clockin.time_logged.to_time.strftime('%B %e at %l:%M %p') %></td>
+                  <td><%= @clockin.clocking_in ? 'You are currently clocked in.' : 'You have successfully clocked out.' %></td>
+                  <td><%= link_to 'Edit', edit_clockin_path(@clockin), class: 'has-text-link' %></td>
+                  <td><%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'has-text-link' %></td>
+               </tr>
+            </tbody>
+            <% end %>
+         </table>
+      </div>
+   </div>
+</div>
 
-  <%
-    @main = {
-      title: 'Employee Clock In',
-      description: 'Clock in here',
-    }
-  %>
-  <%= render 'main' %>
-  <div class="box has-text-centered">
-   <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
-  </div>
-  <h1 class='section'>
-    <strong class='has-text-primary'><u>Clock-in Information</u></strong>
-  </h1> 
-  <div class="container has-text-left">
-    <div class='columns is-mobile is-left'> 
-      <table class="table is-hoverable is-fullwidth">
-      <thead>
-        <tr>
-          <th>Full Name</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Edit Entry</th>
-          <th>Delete Entry</th>
-        </tr>
-      </thead>
-      <% @clockins.each do |clockin| %>
-        <% @clockin = clockin %>
-        <%= render 'event' %>
-      <% end %>
-    </table>
-  </div>
-</div>
-</div>

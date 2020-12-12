@@ -1,7 +1,3 @@
-require "test_helper"
-
-class ClockinTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+require 'test_helper'
+class Clockin < ActiveSupport::TestCase
 end

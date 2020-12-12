@@ -1,13 +1,30 @@
-  <div class="container">
-
-    <%
+<div class="container">
+   <%
       @main = {
         title: 'Edit Clock In',
         description: 'You can clock out from here',
       }
-    %>
-    <%= render 'main' %>
-
-    <%= render 'edit_form' %>
-  
-  </div>
+      %>
+   <%= render 'main' %>
+   <%= simple_form_for :clockin, local: true, class: 'form' do |f| %>
+   <div class="field">
+      <div class="control">
+         <%= f.label :name, 'Full Name', class: 'label' %>
+      </div>
+      <%= f.text_field :name, placeholder:'Please Enter Full Name', class: 'input is-rounded' %>
+   </div>
+   <div class="field">
+      <div class="control">
+         <%= f.label :time_logged,'Time Logged', class: 'label' %>
+      </div>
+      <%= f.datetime_field :time_logged, class: 'input is-rounded' %>
+   </div>
+   <div class="field">
+      <div class="control">
+         <%= f.check_box :clocking_in, class: 'checkbox' %>
+         <%= f.label :clocking_in, 'Check Box to Clock In', class: 'label' %>
+      </div>
+   </div>
+   <%= f.submit 'Edit Clock Event' , class: 'button is-info' %>
+   <% end %>
+</div>
