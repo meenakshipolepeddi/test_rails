@@ -1,0 +1,19 @@
+<div class="event">
+  <div class="event__content">
+    <div class="event__content__header">
+      <p class="event__content__time-logged">
+        <%= @clockin.time_logged.strftime('%B %e, %Y - %l:%M %p') %>
+      </p>
+      <span class="event__content__actions">
+        <%= link_to 'Edit', edit_clockin_path(@clockin), class: 'event__content__actions__action' %>
+        <%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'event__content__actions__action' %>
+      <span>
+    </div>
+    <div class="event__content__data">
+      <p class="event__content__data__name"><%= @clockin.name %></p>
+      <span class="event__content__data__type <%= @clockin.clocking_in ? 'event__content__data__type--in' : 'event__content__data__type--out' %>">
+        <%= @clockin.clocking_in ? 'Clocking In' : 'Clocking Out' %>
+      </span>
+    </div>
+  </div>
+</div>

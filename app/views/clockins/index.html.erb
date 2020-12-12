@@ -1,2 +1,19 @@
-<h1>Clockins#index</h1>
-<p>Find me in app/views/clockins/index.html.erb</p>
+<div class="container">
+
+  <%
+    @hero = {
+      title: 'Employee Clock In',
+      description: 'Clock in here',
+      include_logo: true,
+    }
+  %>
+  <%= render 'hero' %>
+
+  <%= link_to 'New Clock Event', new_clockin_path, class: 'button' %>
+
+  <% @clockins.each do |clockin| %>
+    <% @clockin = clockin %>
+    <%= render 'event' %>
+  <% end %>
+
+</div>
