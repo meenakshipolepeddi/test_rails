@@ -1,15 +1,17 @@
 <%= form_with scope: :clockin, url: clockins_path, local: true, class: 'form' do |form| %>
-  <div class="form__field">
-    <div class="form__field__header">
-      <%= form.label :name, 'Your Name', class: 'form__field__header__label' %>
+  <div class="field">
+    <div class="control">
+      <%= form.label :name, 'Full Name', class: 'label' %>
     </div>  
-    <%= form.text_field :name, class: 'form__field__input' %>
+    <%= form.text_field :name, placeholder:'Please Enter Full Name', class: 'input is-rounded' %>
   </div>
-  <div class="form__field">
-    <div class="form__field__flex">
-      <%= form.check_box :clocking_in, class: 'form__field__checkbox' %>
-      <%= form.label :clocking_in, 'Check Box to Clock In', class: 'form__field__checkbox__label' %>
+  <div class="field">
+    <div class="control">
+      <%= form.check_box :clocking_in, class: 'checkbox' %>
+      <%= form.label :clocking_in, 'Clock In/ Out', class: 'checkbox'%>
     </div>
   </div>
   <%= form.submit 'Clock In/Out ', class: 'button is-primary' %>
 <% end %>
+
+

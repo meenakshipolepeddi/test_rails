@@ -9,7 +9,7 @@
     <div class="event__content__data">
       <p class="event__content__data__name"><%= @clockin.name %></p>
       <span class="event__content__data__type <%= @clockin.clocking_in ? 'event__content__data__type--in' : 'event__content__data__type--out' %>">
-        <%= @clockin.clocking_in ? 'Clocking In' : 'Clocking Out' %>
+        <%= @clockin.clocking_in ? 'You are currently clocked in.' : 'Are you sure you want to clock out?' %>
       </span>
     </div>
   </div>

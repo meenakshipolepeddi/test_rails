@@ -4,12 +4,11 @@
     @hero = {
       title: 'Employee Clock In',
       description: 'Clock in here',
-      include_logo: true,
     }
   %>
   <%= render 'hero' %>
 
-  <%= link_to 'New Clock in Event', new_clockin_path, class: 'button is-info' %>
+  <%= link_to 'Clock in Event', new_clockin_path, class: 'button is-info' %>
 
   <% @clockins.each do |clockin| %>
     <% @clockin = clockin %>

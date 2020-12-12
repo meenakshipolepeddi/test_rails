@@ -1,21 +1,21 @@
 <%= form_with model: @clockin, local: true, class: 'form' do |form| %>
-  <div class="form__field">
-    <div class="form__field__header">
-      <%= form.label :name, 'Your Name', class: 'form__field__header__label' %>
+  <div class="field">
+    <div class="control">
+      <%= form.label :name, 'Full Name', class: 'label' %>
     </div>  
-    <%= form.text_field :name, class: 'form__field__input' %>
+    <%= form.text_field :name, placeholder:'Please Enter Full Name', class: 'input is-rounded' %>
   </div>
-  <div class="form__field">
-    <div class="form__field__header">
-      <%= form.label :time_logged, class: 'form__field__header__label' %>
+  <div class="field">
+    <div class="control">
+      <%= form.label :time_logged, class: 'label' %>
     </div>  
-    <%= form.datetime_field :time_logged, class: 'form__field__input' %>
+    <%= form.datetime_field :time_logged, class: 'input is-rounded' %>
   </div>
-  <div class="form__field">
-    <div class="form__field__flex">
-      <%= form.check_box :clocking_in, class: 'form__field__checkbox' %>
-      <%= form.label :clocking_in, 'Check Box to Clock In', class: 'form__field__checkbox__label' %>
+  <div class="field">
+    <div class="control">
+      <%= form.check_box :clocking_in, class: 'checkbox' %>
+      <%= form.label :clocking_in, 'Check Box to Clock In', class: 'label' %>
     </div>
   </div>
-  <%= form.submit 'Edit Clock Event #' + @clockin.id.to_s, class: 'button' %>
+  <%= form.submit 'Edit Clock Event #' + @clockin.id.to_s, class: 'button is-info' %>
 <% end %>

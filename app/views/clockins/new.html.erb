@@ -1,11 +1,10 @@
-<div class="outer-flex-container">
+<div class="level">
   <div class="container">
 
     <%
       @hero = {
-        title: 'New Clock Event',
+        title: 'Clock In',
         description: sanitize('Use the form below to create a new clock in/out event. <a href="/" class="hero__link">Click here</a> to go home.'),
-        include_logo: false,
       }
     %>
     <%= render 'hero' %>

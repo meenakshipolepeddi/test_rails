@@ -3,9 +3,8 @@
 
     <%
       @hero = {
-        title: 'Edit Clock Event',
+        title: 'Edit Clock In',
         description: sanitize('Use the form below to edit clock event #' + @clockin.id.to_s + '. <a href="/" class="hero__link">Click here</a> to go home.'),
-        include_logo: false,
       }
     %>
     <%= render 'hero' %>
