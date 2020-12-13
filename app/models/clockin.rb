@@ -5,10 +5,12 @@ class Clockin < ApplicationRecord
   validates :name, presence: true, length: {maximum: 50}, allow_nil: false
   validates :clocking_in, inclusion: [true, false], allow_nil: false
   validates :time_logged, presence: true, allow_nil: false
+  validates :clockout_logged, presence: true, allow_nil: true
 
   private
     def generate_time_logged
       self.time_logged = DateTime.now
+      #self.clockout_logged = DateTime.n
     end
 
     def store_time_logged_before_first_validation

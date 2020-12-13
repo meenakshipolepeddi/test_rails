@@ -15,14 +15,20 @@
    </div>
    <div class="field">
       <div class="control">
-         <%= f.label :time_logged,'Time Logged in UTC', class: 'label' %>
+         <%= f.label :time_logged,'Edit Time Logged', class: 'label' %>
       </div>
       <%= f.datetime_field :time_logged, class: 'input is-rounded' %>
    </div>
    <div class="field">
       <div class="control">
+         <%= f.label :clockout_logged,'Clock out', class: 'label' %>
+      </div>
+      <%= f.datetime_field :clockout_logged, class: 'input is-rounded' %>
+   </div>
+   <div class="field">
+      <div class="control">
          <%= f.check_box :clocking_in, class: 'check_box' %>
-         <%= f.label :clocking_in, 'Clock In/ Out', class: 'check_box'%>
+         <%= f.label :clocking_in, 'Uncheck this to clock out/ check it clock back in', class: 'check_box'%>
       </div>
    </div>
    <%= f.submit 'Edit Clock Event' , class: 'button is-info' %>

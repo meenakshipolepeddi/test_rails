@@ -4,6 +4,7 @@ class CreateClockins < ActiveRecord::Migration[6.1]
       t.string :name
       t.boolean :clocking_in
       t.datetime :time_logged
+      t.datetime :clockout_logged
 
       t.timestamps
     end

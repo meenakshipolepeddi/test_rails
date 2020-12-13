@@ -16,8 +16,14 @@
    </div>
    <div class="field">
       <div class="control">
+         <%= f.label :time_logged,'Time Logged', class: 'label' %>
+      </div>
+      <%= f.datetime_field :time_logged, class: 'input is-rounded' %>
+   </div>
+   <div class="field">
+      <div class="control">
          <%= f.check_box :clocking_in, class: 'check_box' %>
-         <%= f.label :clocking_in, 'Clock In/ Out', class: 'check_box'%>
+         <%= f.label :clocking_in, 'Are you sure you want to clock in?', class: 'check_box'%>
       </div>
    </div>
    <%= f.submit 'Clock In/Out ', class: 'button is-primary' %>

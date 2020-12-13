@@ -25,7 +25,6 @@ What schema design did you choose and why?
 	In an attempt to keep it simple, I did not create multiple tables. I was trying to limit the complexity of the design.
 
 If you were given another day to work on this, how would you spend it? What if you were given a month?
-	I could make a lot of improvements 
 	1. Better database design to allow for complexities such as 
 		a. multiple clock ins at the same time 
 		b. user duplication
@@ -45,4 +44,6 @@ If you were given another day to work on this, how would you spend it? What if y
 	8. Employee Profiles
 	9. Logins 
 	10. Admins 
-	11. I could go on. 
+	11. Add automatic break reminders 
+	12. date comparision check (clock out should always be later than clock in) 
+	

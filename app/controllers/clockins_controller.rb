@@ -39,6 +39,6 @@ class ClockinsController < ApplicationController
   end
   private
   def clockin_params
-    params.require(:clockin).permit(:name, :time_logged, :clocking_in)
+    params.require(:clockin).permit(:name, :time_logged, :clockout_logged, :clocking_in)
   end
 end
