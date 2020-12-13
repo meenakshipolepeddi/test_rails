@@ -38,6 +38,9 @@ end
 # bulma css
 gem 'bulma-rails', '~> 0.9.1'
 
+#bulma calendar
+gem 'datetime_picker_input' 
+
 #simple form
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
