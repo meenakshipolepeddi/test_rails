@@ -3,8 +3,7 @@ class CreateClockins < ActiveRecord::Migration[6.1]
     create_table :clockins do |t|
       t.string :name
       t.boolean :clocking_in
-      t.datetime :time_logged
-      t.datetime :clockout_logged
+     # t.datetime :time_logged
 
       t.timestamps
     end
