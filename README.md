@@ -22,5 +22,27 @@ What schema design did you choose and why?
 	3. Store the values
 
 	Based on that idea I did my research and tried to build the application. 
+	In an attempt to keep it simple, I did not create multiple tables. I was trying to limit the complexity of the design.
 
 If you were given another day to work on this, how would you spend it? What if you were given a month?
+	I could make a lot of improvements 
+	1. Better database design to allow for complexities such as 
+		a. multiple clock ins at the same time 
+		b. user duplication
+		c. lack of proper indexing and keys 
+		d. date changes 
+		e. time logged 
+	2. Improvements in Design and style sheets
+		To keep things simple I imported the bulma gem and used it for basic styling, given time, I would 
+		a. Have a global stylesheet
+		b. Individual and uniform stylesheets for each element
+		c. Maintain consistency 
+	3. Have dropdowns instead of text boxes 
+	4. JSON
+	5. Breadcrumbs 
+	6. Menu
+	7. Images 
+	8. Employee Profiles
+	9. Logins 
+	10. Admins 
+	11. I could go on. 
