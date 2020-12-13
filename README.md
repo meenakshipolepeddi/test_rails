@@ -51,10 +51,9 @@ If you were given another day to work on this, how would you spend it? What if y
 	
 	Documentation Steps:
 	This application takes in Name, clock in date/time, clock out date time. 
-	1. Please enter your name
-	2. Please select the interface to clock in
-	3. Check/uncheck the checkbox to confirm changes
-	4. Want to clock out? Click on the "Edit" to make modifications to the entry
-		4.a. Don't want to edit? Click on the "Home" button at the top left corner
-	5. The record can be completely deleted by clicking on "Delete"
+	1. Please click on the Clock In Button to enter your name and clock in
+	2. Check/uncheck the checkbox to confirm changes
+	3. Want to clock out? Click on the "Edit" to make modifications to the entry
+		3.a. Don't want to edit? Click on the "Home" button at the top left corner
+	4. The record can be completely deleted by clicking on "Delete"
 	
