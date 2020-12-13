@@ -23,7 +23,6 @@ What schema design did you choose and why?
 	Based on that idea I did my research and tried to build the application. 
 	In an attempt to keep it simple, I did not create multiple tables. I was trying to limit the complexity of the design.
 
-	
 
 If you were given another day to work on this, how would you spend it? What if you were given a month?
 	1. Better database design to allow for complexities such as 
@@ -47,4 +46,5 @@ If you were given another day to work on this, how would you spend it? What if y
 	10. Admins 
 	11. Add automatic break reminders 
 	12. date comparision check (clock out should always be later than clock in) 
+	Mostly if given another day, I would prioritize the date pickers. At the moment the application best works on Google Chrome. 
 	
