@@ -20,9 +20,10 @@ What schema design did you choose and why?
 	1. Take 2 inputs
 	2. Be editable 
 	3. Store the values
-
 	Based on that idea I did my research and tried to build the application. 
 	In an attempt to keep it simple, I did not create multiple tables. I was trying to limit the complexity of the design.
+
+	
 
 If you were given another day to work on this, how would you spend it? What if you were given a month?
 	1. Better database design to allow for complexities such as 
