@@ -23,9 +23,9 @@ What schema design did you choose and why?
 	Based on that idea I did my research and tried to build the application. 
 	In an attempt to keep it simple, I did not create multiple tables. I was trying to limit the complexity of the design.
 
-	
 
 If you were given another day to work on this, how would you spend it? What if you were given a month?
+	Mostly if given another day, I would prioritize the date pickers. At the moment the application browser specifc and works best on Google Chrome. 
 	1. Better database design to allow for complexities such as 
 		a. multiple clock ins at the same time 
 		b. user duplication
@@ -47,4 +47,13 @@ If you were given another day to work on this, how would you spend it? What if y
 	10. Admins 
 	11. Add automatic break reminders 
 	12. date comparision check (clock out should always be later than clock in) 
+	
+	
+	Documentation Steps:
+	This application takes in Name, clock in date/time, clock out date time. 
+	1. Please click on the Clock In Button to enter your name and clock in
+	2. Check/uncheck the checkbox to confirm changes
+	3. Want to clock out? Click on the "Edit" to make modifications to the entry
+	4. Don't want to edit or clock-in? Click on the "Home" button at the top left corner
+	5. The record can be completely deleted by clicking on "Delete"
 	
