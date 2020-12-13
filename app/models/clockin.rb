@@ -10,7 +10,7 @@ class Clockin < ApplicationRecord
   private
     def generate_time_logged
       self.time_logged = DateTime.now
-      #self.clockout_logged = DateTime.n
+      #self.clockout_logged = DateTime.now
     end
 
     def store_time_logged_before_first_validation
