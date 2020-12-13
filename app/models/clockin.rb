@@ -2,7 +2,7 @@ class Clockin < ApplicationRecord
 	before_create :generate_time_logged
   before_validation :store_time_logged_before_first_validation
 
-  validates :name, presence: true, length: {maximum: 92}, allow_nil: false
+  validates :name, presence: true, length: {maximum: 50}, allow_nil: false
   validates :clocking_in, inclusion: [true, false], allow_nil: false
   validates :time_logged, presence: true, allow_nil: false
 

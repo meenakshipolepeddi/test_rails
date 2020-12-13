@@ -18,7 +18,7 @@
             <thead>
                <tr>
                   <th>Full Name</th>
-                  <th>Date</th>
+                  <th>Clock-in Date</th>
                   <th>Status</th>
                   <th>Edit Entry</th>
                   <th>Delete Entry</th>
@@ -29,7 +29,7 @@
             <tbody>
                <tr>
                   <td><strong class="has-text-primary"><%= @clockin.name %></strong></td>
-                  <td><%= @clockin.time_logged.to_time.strftime('%B %e at %l:%M %p') %></td>
+                  <td><%= @clockin.time_logged.in_time_zone("Eastern Time (US & Canada)").to_time.strftime('%B %e at %l:%M %p') %></td>
                   <td><%= @clockin.clocking_in ? 'You are currently clocked in.' : 'You have successfully clocked out.' %></td>
                   <td><%= link_to 'Edit', edit_clockin_path(@clockin), class: 'has-text-link' %></td>
                   <td><%= link_to 'Delete', clockin_path(@clockin), method: :delete, class: 'has-text-link' %></td>
