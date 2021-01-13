@@ -10,6 +10,7 @@ How did you approach this challenge?
 			https://www.youtube.com/watch?v=wbZ6yrVxScM
 			https://www.youtube.com/watch?v=pPy0GQJLZUM
 			https://www.youtube.com/watch?v=fmyvWz5TUWg
+			https://github.com/harrylewis/clockio
 		1.b. This was then followed by getting a picture of what I need to and how.
 		1.c. StackOverFlow for all the errors, and GitHub for code snippets
 	2. Once I had my page layout in mind. I focused on the flow. (main, new and edit pages for the clock in event)
